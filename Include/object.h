@@ -75,6 +75,7 @@ whose size is determined when the object is allocated.
 #endif
 
 /* PyObject_HEAD defines the initial segment of every PyObject. */
+//Python Object 宏定义
 #define PyObject_HEAD                   \
     _PyObject_HEAD_EXTRA                \
     Py_ssize_t ob_refcnt;               \
@@ -93,6 +94,7 @@ whose size is determined when the object is allocated.
  * has room for ob_size elements.  Note that ob_size is an element count,
  * not necessarily a byte count.
  */
+//Python Object 变量宏定义
 #define PyObject_VAR_HEAD               \
     PyObject_HEAD                       \
     Py_ssize_t ob_size; /* Number of items in variable part */
